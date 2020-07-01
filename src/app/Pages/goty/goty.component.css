@@ -1,0 +1,7 @@
+.card-group {
+    column-count: 4;
+}
+.card-img-top{
+  width:230px ;
+  height: 130px;
+}

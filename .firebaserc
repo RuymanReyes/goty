@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestore-graficas-5d068": {
+      "hosting": {
+        "goty": [
+          "firestore-graficas-5d068"
+        ]
+      }
+    }
+  }
+}

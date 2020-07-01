@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-grafico-barraa-horizontal',
+  selector: 'app-grafico-barra-horizontal',
   templateUrl: './grafico-barra-horizontal.component.html',
   styleUrls: ['./grafico-barra-horizontal.component.css']
 })
 export class GraficobarraHorizontalComponent implements OnDestroy {
- results: any[] = [
+/*  results: any[] = [
    {
      name: 'Juego 1',
      value: 20
@@ -23,7 +23,8 @@ export class GraficobarraHorizontalComponent implements OnDestroy {
      name: 'Juego 4',
      value: 30
    }
- ];
+ ]; */
+ @Input() results: any[] = [];
 
 
   view: any[] = [700, 400];
@@ -40,11 +41,13 @@ export class GraficobarraHorizontalComponent implements OnDestroy {
 
   colorScheme = 'nightLights';
 
-  intervalo;
+  // intervalo;
 
   constructor() {
 
-    this.intervalo = setInterval( () => {
+    // ESTO ES PARA EL COMIENZO PARA QUE HAGA AUTO LOS DATOS
+
+/*     this.intervalo = setInterval( () => {
       console.log('ticks');
 
       const newResults = [ ...this.results ];
@@ -53,7 +56,7 @@ export class GraficobarraHorizontalComponent implements OnDestroy {
         newResults[i].value = Math.round( Math.random() * 500 ); // SACA VALORES ENTEROS
       }
       this.results = [... newResults ];
-    }, 1500 );
+    }, 1500 ); */
   }
 
   onSelect(event) {
@@ -61,6 +64,6 @@ export class GraficobarraHorizontalComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    clearInterval( this.intervalo );
+    // clearInterval( this.intervalo );
   }
 }
